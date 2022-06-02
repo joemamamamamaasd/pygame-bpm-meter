@@ -1,0 +1,41 @@
+import pygame
+
+
+pygame.init()
+bpm = 20
+#put character names under here
+character_1 = "character name and sprite"
+character_2 = "character name and sprite"
+character_3 = "character name and sprite"
+character_4 = "character name and sprite"
+character_5 = "character name and sprite"
+near_by = True
+
+surface = pygame.display.set_mode((400,300))
+#bpm meter
+color = (255,0,0)
+color2 = (100, 100, 100)
+pygame.draw.rect(surface, color2, pygame.Rect(30, 30, 90, 40))
+pygame.draw.rect(surface, color, pygame.Rect(35, 40, 10, 20))
+pygame.display.flip()
+pygame.time.wait(1000)
+if near_by == True:
+    
+    pygame.draw.rect(surface, color2, pygame.Rect(30, 30, 90, 40))
+    pygame.draw.rect(surface, color, pygame.Rect(35, 40, 20, 20))
+    pygame.display.flip()
+    pygame.time.wait(1000)
+    
+near_by = False
+if near_by == False:
+    pygame.draw.rect(surface, color2, pygame.Rect(30, 30, 90, 40))
+    pygame.draw.rect(surface, color, pygame.Rect(35, 40, 10, 20))
+    pygame.display.flip()
+    pygame.time.wait(1000)
+    
+near_by = True
+if near_by == True:
+    pygame.draw.rect(surface, color2, pygame.Rect(30, 30, 90, 40))
+    pygame.draw.rect(surface, color, pygame.Rect(35, 40, 30, 20))
+    pygame.display.flip()
+    pygame.time.wait(1000)
